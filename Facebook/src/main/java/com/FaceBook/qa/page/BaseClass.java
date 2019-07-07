@@ -3,6 +3,7 @@ package com.FaceBook.qa.page;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.FaceBook.qa.utilities.BrowserFactory;
@@ -11,20 +12,19 @@ import com.FaceBook.qa.utilities.ReadConfigFile;
 public class BaseClass {
 	
 	public WebDriver driver;
-	public ReadConfigFile configFile;
+	public ReadConfigFile config;
 	
-	
-	@BeforeSuite()
+	@BeforeSuite
 	public void initialSetUp() {
-		configFile = new ReadConfigFile();
+		config = new ReadConfigFile();
 	}
 	
-	@BeforeClass()
+	@BeforeClass
 	public void appLauncher() {
-		driver = BrowserFactory.startBrowser(driver, configFile.getBrower(), configFile.autUrl());
+		driver = BrowserFactory.startBrowser(driver, config.getBrower(), config.autUrl());
 	}
 	
-	@AfterClass()
+	@AfterClass
 	public void appWrapUp(){
 		BrowserFactory.closeBrowser(driver);
 	}

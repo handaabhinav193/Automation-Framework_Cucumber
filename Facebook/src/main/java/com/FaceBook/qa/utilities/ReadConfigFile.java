@@ -13,12 +13,12 @@ public class ReadConfigFile {
 		/*
 		 * To define path of the configuration file
 		 */
-		File configFile = new File("/Users/handa/eclipse-workspace/Facebook/Utility_Folders/Configuration/config.properties");
+		File src = new File("\\Users\\handa\\git\\Automation-Framework_Cucumber\\Facebook\\Utility_Folders\\Configuration\\config.properties");
 		try {
 			/*
 			 * For Reading the configuration file
 			 */
-			FileInputStream read = new FileInputStream(configFile);
+			FileInputStream read = new FileInputStream(src);
 			/*
 			 * Object creation of Properties Class for accessing the parameter from config file
 			 */
