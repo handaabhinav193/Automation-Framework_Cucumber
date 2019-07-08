@@ -4,12 +4,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.BeforeSuite;
 
 import com.FaceBook.qa.utilities.*;
-import com.FaceBook.qa.utilities.ReadConfigFile;
 
 public class LoginPage extends BaseClass{
+	
+	public ReadConfigFile cfile;
 	
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
@@ -41,11 +41,10 @@ public class LoginPage extends BaseClass{
 	
 	String gender = "//label[text()='gender']";
 	
-	public HomePage enterCredentials() {
-		user.sendKeys(config.uName());
-		pass.sendKeys(config.uPass());
-		loginBtn.click();
-		return new HomePage();
+	public void enterCredentials() {
+		cfile= new ReadConfigFile();
+		user.sendKeys(cfile.uName());
+		pass.sendKeys(cfile.uPass());
 	}
 
 }

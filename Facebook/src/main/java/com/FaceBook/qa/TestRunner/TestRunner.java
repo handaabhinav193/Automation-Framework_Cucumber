@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 		monochrome = true, //to display the output in readable format
 		plugin = {"html:target/LeadershipReport/cucumber-html-report"},
 		strict = false,	//it will fail the methods if any undefined methods are given.
-		dryRun = true // will check if the mapping is done correctly or not.
+		dryRun = false // will check if the mapping is done correctly or not.
 		)
 public class TestRunner {
 }

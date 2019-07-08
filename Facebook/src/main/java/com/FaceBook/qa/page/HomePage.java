@@ -11,8 +11,6 @@ public class HomePage extends BaseClass{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public HomePage homepage;
-	
 	@FindBy(how = How.XPATH, using="//div[text()='Abhinav Handa']")
 	public WebElement homeTagAbhinav;
 	
