@@ -4,13 +4,13 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 
-import com.FaceBook.qa.utilities.BrowserFactory;
-import com.FaceBook.qa.utilities.ReadConfigFile;
+import com.FaceBook.qa.utilities.*;
 
 public class BaseClass {
 	
 	public static WebDriver driver;
 	public ReadConfigFile configFile;
+	public LoginPage loginPage;
 	
 	@BeforeClass
 	public void startTestSession() {
@@ -22,5 +22,4 @@ public class BaseClass {
 	public void endTestSession(){
 		BrowserFactory.closeBrowser(driver);
 	}
-
 }

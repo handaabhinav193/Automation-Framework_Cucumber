@@ -1,6 +1,5 @@
 package com.FaceBook.qa.page;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -8,14 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.FaceBook.qa.utilities.ReadConfigFile;
 
-public class LoginPage {
+public class LoginPage extends BaseClass{
+
+	public ReadConfigFile config;
 	
-	WebDriver ldriver;
-	public ReadConfigFile configFile;
-	
-	public LoginPage(WebDriver rdriver) {
-		this.ldriver=rdriver;
-		PageFactory.initElements(rdriver, LoginPage.class);
+	public LoginPage() {
+		PageFactory.initElements(BaseClass.driver, LoginPage.class);
 	}
 	
 	@FindBy(how=How.XPATH, using="//input[@name='email']")
@@ -25,9 +22,9 @@ public class LoginPage {
 	public WebElement password;
 	
 	public void enterUserPassDetails() {
-		configFile = new ReadConfigFile();
-		username.sendKeys(configFile.uName());
-		password.sendKeys(configFile.uPass());
+		config = new ReadConfigFile();
+		username.sendKeys(config.uName());
+		password.sendKeys(config.uPass());
 	}
 
 }

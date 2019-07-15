@@ -7,10 +7,11 @@ import cucumber.api.java.en.Given;
 
 public class LoginSteps extends BaseClass{
 	
-	@Given("^I enter username and password and hit login button$")
+	
+	@Given("I enter username and password and hit login button")
 	public void enterLoginDetails(){
-	    LoginPage loginpage = new LoginPage(driver);
-	    loginpage.enterUserPassDetails();
+		loginPage = new LoginPage();
+		loginPage.enterUserPassDetails();
 	}
 
 }

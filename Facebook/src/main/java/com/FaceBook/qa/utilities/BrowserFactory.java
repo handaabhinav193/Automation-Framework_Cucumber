@@ -13,18 +13,16 @@ public class BrowserFactory {
 	public static void startBrowser(WebDriver driver, String Browser, String applicationURL) {
 		
 	if(Browser.equals("Chrome")) {
-		
 		ChromeOptions ops = new ChromeOptions();
         ops.addArguments("--disable-notifications");
-		System.setProperty("webdriver.chrome.driver", "//Users//handa//eclipse-workspace//Facebook//Utility_Folders//Drivers//chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./Facebook/Utility_Folders/Drivers/chromedriver.exe");
 		driver = new ChromeDriver(ops);
-		
-	}
-	else if(Browser.equals("Firefox")) {
+		}
+	else if(Browser.equals("Firefox")){
 		System.setProperty("webdriver.chrome.driver", "//Users//handa//eclipse-workspace//Facebook//Utility_Folders//Drivers//geckodriver.exe");
 		driver = new FirefoxDriver();
-	}
-	else if(Browser.equals("IE")) {
+		}
+	else if(Browser.equals("IE")){
 		System.setProperty("webdriver.chrome.driver", "//Users//handa//eclipse-workspace//Facebook//Utility_Folders//Drivers//IEDriverServer.exe");
 		driver = new InternetExplorerDriver();
 		}
