@@ -13,11 +13,13 @@ public class ReadConfigFile {
 		/*
 		 * To define path of the configuration file
 		 */
+
 		File readFile = new File("C:\\Users\\handa\\git\\Automation-Framework_Cucumber\\Facebook\\Utility_Folders\\Configuration\\config.properties");
 		try {
 			/*
 			 * For Reading the configuration file
 			 */
+
 			FileInputStream read = new FileInputStream(readFile);
 			/*
 			 * Object creation of Properties Class for accessing the parameter from config file

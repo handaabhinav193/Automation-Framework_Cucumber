@@ -14,5 +14,4 @@ import cucumber.api.junit.Cucumber;
 		dryRun = true // will check if the mapping is done correctly or not.
 		)
 public class TestRunner {
-
 }

@@ -27,6 +27,7 @@ public class BrowserFactory {
 	else {
 		System.out.println("We do not support this browser");
 				}
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get(applicationURL);
