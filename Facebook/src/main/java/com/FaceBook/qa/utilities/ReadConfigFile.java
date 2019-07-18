@@ -1,6 +1,5 @@
 package com.FaceBook.qa.utilities;
 
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
